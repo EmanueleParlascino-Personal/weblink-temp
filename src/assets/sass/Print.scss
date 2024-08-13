@@ -1,0 +1,110 @@
+@media print { 
+    html body .contentwrapper {
+        .content {
+            padding-left: 0;
+        }
+
+        .switch-results-view,
+        .toggle-settings-btn,
+        .crosstable-btn,
+        .hidequestion-btn,
+        .information-bar,
+        .branding-image .main-button,
+        .top-bar,
+        .settings-pane,
+        .block-header,
+        .mr-question-text,
+        .right-panel,
+        .button-container {
+            display: none;
+        }
+
+        
+        .legend-container span {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        article {
+            border-radius: 0;
+            border-bottom: 1px solid #c0c0c0;
+            padding: 40px 0 !important; //overwrite too specific styling, just for print
+            page-break-inside: avoid;
+
+            &:has(article) {
+                border-bottom-width: 0;
+            }
+        }
+        
+        .star-rating {
+            background-color: var(--brand-color) !important;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .bottom-respondent-count {
+            right: 70px;
+            bottom: 0;
+        }
+
+        .ranking-bar {
+            background-color: pink;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .swipe-color-overlay {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .answer-container:has(li) {
+            max-height: fit-content;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+            width: 92%;
+
+            li {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+
+        .slider-container {
+            width: 92%;
+        }
+
+        .slider-range {
+            background-color: var(--brand-color);
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .image-container {
+            width: 95%;
+            max-height: 320mm;
+            overflow: hidden;
+
+            .image-div {
+                margin-top: 20px;
+                width: 90%;
+            }
+        }
+
+        .slider-range-container {
+            background-color: #c0c0c0;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+    }
+
+    #feedback-button-crowdtech {
+        display: none;
+    }
+
+    [data-question-show="false"],
+    [data-subquestion-show="false"], 
+    [data-all-subquestion-show="false"]{
+        display: none;
+    }
+}

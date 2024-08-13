@@ -1,0 +1,99 @@
+@import "./LegendContainer";
+@import "./StarRating";
+@import "./AnswerList";
+@import "./Chart";
+@import "./ActionBar";
+@import "./SettingsPane";
+@import "./Slider";
+@import "./ColorPalettePane";
+@import "./Hotspot";
+@import "./Ranking";
+@import "./CrossTable";
+@import "./Print";
+@import "./Camera.scss";
+
+.branding-image {
+    display: flex;
+    padding-bottom: 20px;
+
+    div {
+        position: relative;
+    }
+
+    a#results-overview-nav-to-edit-branding-anchor {
+        position: absolute;
+        top: 0px;
+        right: -15px;
+        border-radius: 25px;
+        width: 35px;
+        height: 35px;
+    }
+    
+    a#results-overview-nav-to-branding-anchor {
+        z-index: 1;
+    }
+}
+
+#app {
+    width: 100%;
+}
+
+.switch-results-view {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    position: relative;
+    top: -50px;
+    margin-bottom: -30px;
+
+    > div {
+        width: 250px;
+    }
+}
+
+hr {
+    margin: 20px 0;
+}
+
+.bottom-respondent-count {
+    position: absolute;
+    right: 10px;
+}
+
+.block-header {
+    padding: 25px 0 10px 0;
+}
+
+.bottom-respondent-count-last-sub {
+    position: absolute;
+    right: 10px;
+    bottom: -16px;
+}
+
+.mr-question-text {
+    font-size: 12px;
+}
+
+.basic-chart-label{
+    display: flex;
+    align-items: center;
+    margin-top: -.05px;
+}
+
+.table-view{
+    border: 1px solid #000000;
+    margin-bottom: 10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+tr:nth-child(even) {background: #ededed70 !important}
+
+[data-question-show="false"] .question,
+[data-question-show="false"] .bottom-respondent-count,
+[data-subquestion-show="false"] .subquestion,
+[data-subquestion-show="false"] .bottom-respondent-count,
+[data-all-subquestion-show="false"] > h2,
+[data-all-subquestion-show="false"] > hr
+{
+    opacity: 0.5;
+}

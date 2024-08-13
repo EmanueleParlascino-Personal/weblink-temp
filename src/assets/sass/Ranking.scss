@@ -1,0 +1,62 @@
+.ranking-answer > .answer-data {
+    min-height: 100px;
+}
+
+.chart-ranking {
+    flex: 1;
+    margin-top: 5px;
+}
+
+.ranking-bar {
+    height: 30px;
+    width: 100%;
+    background-color: var(--brand-color-light);
+    position: relative;
+}
+
+.ranking-tooltip {
+    --triangle-width: 8px;
+
+    border-radius: 4px;
+    position: absolute;
+    transform: translate(-50%, -150%);
+    min-width: 49px;
+    padding: 10px;
+    height: 32px;
+    background-color: var(--brand-color);
+
+    p {
+        color: white;
+        margin: 0;
+        font-weight: bold;
+    }
+
+    .triangle {
+        position: absolute;
+        top: 25px;
+
+        &:after {
+            content: '';
+            position: absolute;
+            transform: translateX(-46%);
+            top: 100%;
+            border-left: var(--triangle-width) solid transparent;
+            border-right: var(--triangle-width) solid transparent;
+            border-top: 17px solid var(--brand-color);
+        }
+    }
+}
+
+.ranking-answer .answer-list {
+    padding-top: 20px;
+}
+
+.ranking-score {
+    height: 100%;
+    position: absolute;
+}
+
+.ranking-line {
+    height: 100%;
+    border: 1px solid var(--brand-color);
+}

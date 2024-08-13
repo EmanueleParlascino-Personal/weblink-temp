@@ -1,0 +1,55 @@
+.information-bar {
+    padding: 10px;
+
+    .information-bar-container {
+        background: var(--contrast-color-light);
+        padding: 10px 20px;
+        border-radius: 4px;
+    }
+}
+
+.top-bar {
+    input[type="date"] {
+        width: 120px;
+    }
+
+    #edit-filter-btn {
+        margin-inline-start: 15px;
+    }
+
+    #add-filter-btn {
+        margin-inline-start: 10px;
+    }
+
+    #results-overview-resultaten_datum_vanaf-input {
+        margin-inline-end: 20px;
+    }
+
+    #results-overview-resultaten_datum_tot_en_met-input {
+        margin-inline-end: 40px;
+    }
+
+    #results-overview-resultaten_toon-input {
+        width: 130px;
+    }
+
+    #results-overview-resultaten_toon-input {
+        margin-inline-end: 40px;
+    }
+
+    #filterconditions {
+        margin-inline-end: 40px;
+
+        select {
+            width: 190px;
+        }
+    }
+
+    .label-without-padding {
+        padding: 0;
+    }
+
+    .crosstable-label {
+        margin-block-end: 7px;
+    }
+}

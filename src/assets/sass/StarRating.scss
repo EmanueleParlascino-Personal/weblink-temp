@@ -1,0 +1,33 @@
+.rating-average {
+    p {
+        margin: 0;
+    }
+}
+
+.star-rating {
+    border-radius: 25px;
+    background: var(--brand-color);
+    padding: 12px 10px;
+
+    .back-stars {
+        i {
+            color: var(--brand-color);
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: white;
+        }
+    }
+
+    .front-stars {
+        position: absolute;
+
+        i {
+            color: #ffffff;
+            overflow: hidden;
+        }
+    }
+
+    .front-stars,
+    .back-stars {
+        font-size: 25px;
+    }
+}

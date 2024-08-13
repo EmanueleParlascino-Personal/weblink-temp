@@ -1,0 +1,46 @@
+.answer-container {
+    margin-top: 10px;
+    
+    &:has(li) {
+        overflow-y: auto;
+        max-height: 374px;
+    }
+}
+
+.button-container {
+    display: flex;
+    margin-bottom: 14px;
+}
+
+.respondent-count {
+    font-size: 12px;
+}
+
+.answer-result-score {
+    font-size: 12px;
+}
+
+.question-result-score {
+    font-size: 12px;
+}
+
+.answer-list {
+    margin-bottom: 20px;
+}
+
+.answers-list {
+    padding: 0;
+    margin: 0;
+
+    li {
+        padding: 9px;
+
+        &:nth-child(even) {
+            background: var(--contrast-color-light);
+        }
+    }
+}
+/// For questions with answerlist below chart we need some space.
+[class*="chart-"]+p {
+    margin-top: 14px;
+}

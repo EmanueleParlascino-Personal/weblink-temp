@@ -1,0 +1,113 @@
+[data-graph-type="tagit"] {
+    .right-panel {
+        width: 340px;
+        min-height: 100%;
+        border: var(--border);
+        border-radius: var(--border-radius);
+    }
+
+    .answers {
+        padding: var(--padding);
+        height: calc(100% - 225px);
+
+        > div {
+            width: 100%;
+            flex: 1;
+        }
+    }
+
+    .hover-effect {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.3);
+        pointer-events: none;
+    }
+
+    .image-div {
+        --icon-regular-filter: drop-shadow(0 0 2px black);
+        --icon-selected-filter: drop-shadow(0 0 2px black) contrast(1);
+        --icon-other-icon-selected-filter: drop-shadow(0 0 2px black) contrast(0.3);
+
+        position: relative;
+
+        // If something has been selected, the other icons have to be styled differently
+        &:has(.selected) {
+            i {
+                filter: var(--icon-other-icon-selected-filter);
+            }
+        }
+
+        i {
+            filter: var(--icon-regular-filter);
+            pointer-events: none;
+
+            &.selected {
+                filter: var(--icon-selected-filter);
+            }
+        }
+    }
+
+    .statistics {
+        padding: var(--padding);
+        height: 225px;
+        overflow: auto;
+    }
+
+    .hotspot-icon {
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+
+    .selection-area {
+        border: 2px dashed #000;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .open-answer-list {
+        padding: 0;
+        overflow: auto;
+        max-height: 300px;
+
+        li {
+            padding: 10px;
+            border-bottom: var(--border);
+
+            &:last-of-type {
+                border-bottom: 0;
+            }
+
+            &[data-selected="true"],
+            &:hover {
+                transition: 0.4s all;
+                background: #F5F5F5;
+                cursor: pointer;
+            }
+        }
+
+        i {
+            padding-right: 10px;
+        }
+    }
+
+    section {
+        gap: 20px;
+        padding-top: var(--padding);
+        padding-bottom: var(--padding);
+    }
+
+    .image-container {
+        position: relative;
+        height: fit-content;
+        flex: 1;
+        min-height: 600px;
+
+        img {
+            border: var(--border);
+            width: 100%;
+        }
+    }
+}

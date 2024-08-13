@@ -1,0 +1,68 @@
+.table-container {
+    overflow-x: auto;
+}
+
+.crosstable {
+    width: 100%;
+    border-collapse: collapse;
+    outline: 1px solid #8A8A8A;
+    border-radius: 5px;
+    overflow: hidden;
+
+    th,
+    td {
+        height: 44px;
+        padding: 10px 25px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &.total-respondent-cell {
+            padding: 10px 30px;
+            text-align: center;
+        }
+    }
+
+    td {
+        background-color: white;
+    }
+
+    thead th {
+        background-color: #525252;
+        color: #fff;
+        max-width: 160px;
+
+        &:first-of-type {
+            width: 300px;
+        }
+    }
+
+    tbody td {
+        border-inline-end: 1px solid #d6d6d6;
+    }
+
+    tbody th {
+        width: 300px;
+        max-width: 300px;
+    }
+
+    tbody th,
+    tfoot td {
+        background: #D9D9D9;
+        font-weight: normal;
+        text-align: start;
+    }
+
+    .total-answers-row {
+        border-block-start: 1px solid #d6d6d6;
+
+        th {
+            background-color: white;
+        }
+
+        td {
+            border-inline-end: 0px;
+            background-color: white;
+        }
+    }
+}

@@ -1,0 +1,156 @@
+:root {
+    --bar-height: 36px;
+    --bar-margin: 15px;
+    --chart-top-margin: 7px;
+    --x-axes-width: 250px;
+}
+
+.chart-wrapper {
+    display: flex;
+}
+
+.question-container {
+    .sub-articles {
+        padding: 20px 0;
+        position: relative;
+        
+        &:first-of-type {
+            padding-top: 0;
+        }
+
+        &:last-of-type {
+            padding: 0;
+        }
+    }
+}
+
+.labels-behind-chart,
+.labels-before-chart {
+    margin-top: var(--chart-top-margin);
+    padding-right: 25px;
+
+    div {
+        height: var(--bar-height);
+        margin-bottom: var(--bar-margin);
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .respondent-amt {
+        color: var(--brand-color);
+    }
+}
+
+.labels-behind-chart {
+    padding-left: 30px;
+}
+
+.labels-before-chart {
+    width: var(--x-axes-width);
+
+    p {
+        overflow-wrap: anywhere;
+    }
+}
+
+.chart-container {
+    position: relative;
+}
+
+.chart-stacked {
+    height: 25px;
+}
+
+
+body .graph-setting-btns {
+    right: 10px;
+    top: 10px;
+    position: absolute;
+    display: flex;
+    z-index: 99;
+}
+
+body .sub-articles .graph-setting-btns {
+    right: -10px;
+    top: -10px;
+}
+
+.stacked-bar-chart-container {
+    margin: 20px 0;
+}
+
+article.block {
+    position: relative;
+    h2 {
+        width: 90%;
+    }
+}
+
+article.sub-articles {
+    position: relative;
+    h2 {
+        width: 90%;
+    }
+}
+
+body .close-pane-btn {
+    position: absolute;
+    background: white;
+    top: 2px;
+    right: 2px;
+    border: 0;
+
+    i {
+        color: #6d6d6d;
+    }
+}
+
+.question-image {
+    padding: 0 30px;
+
+    img {
+        max-width: 370px;
+        height: auto;
+    }
+}
+
+.swipe-question-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+    max-width: 700px;
+    img {
+        width: 100%;
+    }
+}
+
+.swipe-color-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.swipe-answers {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+}
+
+.swipe-answer-image {
+    img {
+        max-width: 55px;
+        width: 100%;
+    }
+    p {
+        font-weight: bold;
+        font-size: 24px;
+        margin: 0;
+        padding-left: 5px;
+    }
+}
